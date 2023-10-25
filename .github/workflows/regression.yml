@@ -15,3 +15,13 @@ jobs:
         with:
           spec: cypress/e2e/5-create-account/create-account.cy.js
           browser: chrome
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress-screenshots
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-videos
+          path: cypress-videos
