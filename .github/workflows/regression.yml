@@ -13,7 +13,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          spec: cypress/e2e/5-create-account/create-account.cy.js
+          spec: cypress/e2e/4-Login/login.spec.cy.js
           browser: chrome
       - uses: actions/upload-artifact@v3
         if: failure()
